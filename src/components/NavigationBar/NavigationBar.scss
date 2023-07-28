@@ -1,0 +1,73 @@
+@import "src/constants";
+
+.navigationBarContainer {
+  width: calc(100% - 8px) !important;
+  height: $navigationBarHeight;
+
+  background-color: #dd5e15;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4px;
+
+  .navigationBarLeftPart {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+
+    .linkElement {
+      cursor: pointer;
+      text-align: center;
+      min-width: 50px;
+      text-decoration: none;
+      border-radius: 8px;
+      background: #dd5e15;
+      box-shadow: inset 20px 20px 60px #bc5012,
+      inset -20px -20px 60px #fe6c18;
+
+      .button {
+        font-size: 16px !important;
+        text-decoration: none;
+        color: #FFF;
+      }
+
+    }
+
+  }
+
+  .navigationBarRightPart {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: center;
+    gap: 8px;
+    height: 28px;
+
+    .messengerIcon {
+      width: 28px;
+      height: 28px;
+      object-fit: contain;
+    }
+
+    .phoneLink {
+      color: #FFFFFF;
+      text-decoration: none;
+      font-size: 18px;
+      margin-top: 4px;
+
+    }
+
+  }
+
+}
+
+@media (max-width: 600px) {
+  .navigationBarContainer {
+    flex-direction: column;
+    height: $navigationBarHeightMobile;
+  }
+}
