@@ -11,6 +11,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  perspective: 1px;
 
   .appContainer {
     background-color: #000;
