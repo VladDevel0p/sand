@@ -10,9 +10,9 @@ export interface ICardListProps {
 }
 
 export enum Sections_Id {
-    Sand_ID = 'sand_id',
-    PGS_ID = 'PGS_id',
-    GRAVII_ID = 'gravii_id',
+    Sand_ID = 'песок',
+    PGS_ID = 'пгс',
+    GRAVII_ID = 'щебень',
 }
 export function CardsList(props: ICardListProps) {
 

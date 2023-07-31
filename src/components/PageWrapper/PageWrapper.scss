@@ -17,6 +17,7 @@ body {
     width: 100%;
     height: calc(100vh - #{$navigationBarHeight});
     overflow: auto;
+    position: relative;
 
     @media (max-width: 600px) {
       height: calc(100vh - #{$navigationBarHeightMobile});
