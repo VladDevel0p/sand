@@ -2,6 +2,7 @@ import React, {useEffect, useLayoutEffect} from 'react';
 import './CardsList.scss';
 import {Card} from "../Card/Card";
 import {IGoodCard} from "../../utils/consts";
+import {CardConnected} from "../Card/CardConnected";
 
 export interface ICardListProps {
     idTitle: string;
@@ -24,7 +25,7 @@ export function CardsList(props: ICardListProps) {
         </section>
         <section className={'itemsList'}>
             {props.itemList.map((elem) => {
-                return <Card title={elem.title} image={elem.image} description={elem.description}/>
+                return <CardConnected title={elem.title} image={elem.image} description={elem.description}/>
             })}
         </section>
     </div>
