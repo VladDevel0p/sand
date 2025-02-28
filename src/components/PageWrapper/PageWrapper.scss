@@ -14,16 +14,22 @@ body {
   perspective: 1px;
 
   .appContainer {
-    background-color: #000;
+    background-color: #FFFFFF;
     width: 100%;
-    height: calc(100vh - #{$navigationBarHeight});
+    height: 100vh;
+    //height: calc(100vh - #{$navigationBarHeight});
     overflow: auto;
     position: relative;
 
-    @media (max-width: 600px) {
-      height: calc(100vh - #{$navigationBarHeightMobile});
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    }
+
+    //@media (max-width: 600px) {
+    //  height: calc(100vh - #{$navigationBarHeightMobile});
+    //
+    //}
   }
 
 }

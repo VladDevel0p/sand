@@ -1,0 +1,89 @@
+/* styles.scss */
+
+/* styles.scss */
+
+/* Стили для кнопки */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff4785;
+}
+
+/* Стили для сердечек */
+.heart {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background-color: pink;
+  transform: rotate(-45deg);
+  transition: transform 0.5s ease;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background-color: pink;
+  border-radius: 50%;
+}
+
+.heart::before {
+  left: 10px;
+  transform: translateX(-50%);
+}
+
+.heart::after {
+  left: 0;
+  transform: translateX(50%);
+}
+
+/* Анимация при нажатии на кнопку */
+.heart.animate {
+  transform: translateX(100px) translateY(-100px) rotate(360deg);
+}
+
+
+/* Стили для сердечек */
+.heart-container {
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+.heart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: #ff69b4;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Анимация при нажатии на кнопку */
+.heart.animate {
+  animation: flyAway 1s ease forwards;
+}
+
+@keyframes flyAway {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(50vw - 20px), calc(50vh - 20px));
+  }
+}

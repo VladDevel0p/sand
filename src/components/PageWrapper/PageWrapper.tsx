@@ -8,7 +8,7 @@ import "./PageWrapper.scss";
 
 export function PageWrapper(props) {
     return <main className={'pageWrapper'}>
-        <NavigationBar/>
+        {/*<NavigationBar/>*/}
         <div className={'appContainer'}>
             {props.children}
         </div>
